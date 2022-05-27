@@ -17,3 +17,10 @@ class StaffingReport(report):
         print("==========")
         for e in self._emp_List:
             print(f"{e.getfullname()}, {e.jobtitle}")
+
+class ScheduleReport(report):
+    def print_Report(self):
+        print("\nSchedule")
+        print("==========")
+        for e in self._emp_List:
+            print(f"{e.getfullname()}, {e.shift.get_shift_info()}")
